@@ -1,0 +1,94 @@
+
+.flexcontainer {
+    display: flex;
+    align-items: stretch;
+    padding: 10px;
+    background-color: #efefef;
+    Justify-content: start;
+    width: 500px;
+}
+.flexcontainer_element_1
+ {
+    flex-basis: 70px;
+    text-align: center;
+    padding: 15px;
+    font-size: 30px;
+}
+.flexcontainer_element_1 {
+
+    align-self: flex-start;
+
+}
+.flexcontainer_element_1 img{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+
+}
+
+
+.flexcontainer_element_2 {
+    align-self: flex-end;
+
+}
+.secondflexcontainer {
+    display: flex;
+}
+
+.secondflexcontainer_element_1{
+    background: mediumpurple;
+    color: mediumpurple;
+    clip-path: polygon(100% 82%, 0 100%, 100% 100%);
+    margin: 0px  0px 0px 0px;
+
+}
+.secondflexcontainer_element_2 {
+        background: mediumpurple;
+    margin: 0px  0px 0px 0px;
+    color: white;
+    border-radius: 15px;
+    border-bottom-left-radius: 0px;
+    padding: 15px;
+    margin: 0px;
+}
+.thirdflexcontainer {
+    display: flex;
+}
+.thirdflexcontainer_element_1{
+}
+.time {
+    color: black;
+    text-align: right;
+   /* border: red;
+    border-style: dotted;*/
+    width: 50px;
+    height: 50px;
+}
+.name {
+    color: khaki;
+    font-weight: bold;
+/*    border: green;
+    border-style: dotted;*/
+}
+.message {
+    font-family: Tahoma;
+    /*border: yellow;
+    border-style: dotted;*/
+}
+
+
+
+
+
+/*
+.flexcontainer_element_3 {
+    align-self: stretch;
+    background: lime;
+}
+.flexcontainer_element_4 {
+    align-self: auto;
+    background: cyan;
+}
+
+*/
+

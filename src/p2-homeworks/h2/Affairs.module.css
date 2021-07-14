@@ -1,0 +1,37 @@
+
+.general {
+background-color: darkseagreen;
+
+}
+
+.conteiner {
+    display: flex;
+    background-color: dimgray;
+    width: 300px;
+    color: white;
+    flex-basis: auto;
+
+}
+.second_conteiner {
+    display: flex;
+    flex-basis: auto;
+    width: 300px;
+    justify-content: space-around;
+    align-items: stretch;
+
+}
+.style_id {
+ color: black;
+    align-items: stretch;
+    border-color: blue;
+
+
+}
+.style_name {
+  color: whitesmoke;
+
+}
+.style_priority {
+   color: yellow;
+
+}
