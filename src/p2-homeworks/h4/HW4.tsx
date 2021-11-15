@@ -35,11 +35,12 @@ function HW4() {
 
                 <SuperInputText
                     className={s.blue} // проверьте, рабоет ли смешивание классов
+
                 />
 
                 {/*----------------------------------------------------*/}
 
-                <SuperButton>
+                <SuperButton >
                     default
                 </SuperButton>
 

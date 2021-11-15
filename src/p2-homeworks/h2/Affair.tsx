@@ -16,21 +16,21 @@ function Affair(props: AffairPropsType) {
 props.deleteAffairCallback(props.affairId)
     }// need to fix
 
-    return (
-        <div >
+    return (<>
 
 
             <ul>
-                <li className={s.conteiner}>
-                    <div className={s.second_conteiner}>
-                        <div><span className={s.style_id}>{props.affairId}</span></div>
-                        <div><span className={s.style_name}>{props.affairName}</span></div>
-                        <div><span className={s.style_priority}>{props.affairPriority}</span></div>
-                        <button onClick={deleteCallback}>X</button>
+                <li >
+
+                        <div className={s.affair}>
+                        <div className={s.affair__id}><span >{props.affairId}</span></div>
+                        <div className={s.affair__name}><span >{props.affairName}</span></div>
+                        <div className={s.affair__status}><span >{props.affairPriority}</span></div>
+                        <div className={s.affair__block_button}><button  className={s.affair__button} onClick={deleteCallback}>X</button></div>
                     </div>
                 </li>
             </ul>
-        </div>)
+        </>)
 }
 
 export default Affair

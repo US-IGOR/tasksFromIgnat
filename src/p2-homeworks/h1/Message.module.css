@@ -1,11 +1,17 @@
+.wrapper {
+
+}
 
 .flexcontainer {
     display: flex;
     align-items: stretch;
-    padding: 10px;
-    background-color: #efefef;
+    padding: 10px 0px ;
+    background-color: #333;
     Justify-content: start;
-    width: 500px;
+    width: 400px;
+    border-radius: 5px;
+margin: 20px;
+
 }
 .flexcontainer_element_1
  {
@@ -57,21 +63,22 @@
 .thirdflexcontainer_element_1{
 }
 .time {
-    color: black;
+    color: #333333;
     text-align: right;
-   /* border: red;
-    border-style: dotted;*/
+     font-style: italic;
+    font-size: 12px;
     width: 50px;
     height: 50px;
 }
 .name {
     color: khaki;
     font-weight: bold;
+    font-family: Arial;
 /*    border: green;
     border-style: dotted;*/
 }
 .message {
-    font-family: Tahoma;
+    font-family: Arial;
     /*border: yellow;
     border-style: dotted;*/
 }
