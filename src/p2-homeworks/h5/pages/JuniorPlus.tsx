@@ -1,9 +1,9 @@
 import React from 'react'
 
-export function Error404 () {
+export function JuniorPlus () {
     return (
         <div>
-            Junior
+            Junior+
         </div>
     )
 

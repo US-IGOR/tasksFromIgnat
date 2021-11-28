@@ -16,24 +16,30 @@ const Greeting: React.FC<GreetingPropsType> = (
     {name, setNameCallback, addUser, error, totalUsers, onEnter} // деструктуризация пропсов
 ) => {
 
-debugger
+    debugger
     return (
-        <div className={s.gereating}>
-            <div><input  className={error===true ? s.errorInput : s.input}
+        <div className={s.wrapper}>
+            <div className={s.inner}>
+                <div className={s.wrapper__inputBlock}><input
+                    className={error  ? s.wrapper__input_error : s.wrapper__input}
 
-                value={name}
-                onChange={setNameCallback}
-                onKeyDown={onEnter}
+                    value={name}
+                    onChange={setNameCallback}
+                    onKeyDown={onEnter}
 
-                onBlur={setNameCallback}
-            />
-                {error ? <div className={s.error}>{'Error: dont use space'}  </div> : null}
+                    onBlur={setNameCallback}
+                />
+                    {error ? <div className={s.wrapper__error_error}>{'Error: dont use space'}  </div> : null}
+                </div>
 
+                <div className={s.wrapper__buttonBlock}>
+                    <button className={s.wrapper__button} onClick={addUser}>add</button>
+                </div>
+
+                <div className={s.wrapper__span}>
+                    <span>{totalUsers}</span>
+                </div>
             </div>
-
-
-            <button onClick={addUser}>add</button>
-            <span>{totalUsers}</span>
         </div>
     )
 }

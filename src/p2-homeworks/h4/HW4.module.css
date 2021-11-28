@@ -3,11 +3,27 @@
 }
 
 .column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
 }
 
 .testSpanError {
     color: royalblue;
+}
+
+.wrap {
+    text-align: center;
+}
+.wrapper {
+
+    border-radius: 5px;
+    margin: 20px;
+    width: 400px;
+    height: 300px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+
+
+    background-color: #333333;
 }

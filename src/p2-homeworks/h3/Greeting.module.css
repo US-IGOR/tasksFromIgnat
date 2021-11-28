@@ -1,24 +1,76 @@
-.someClass {
 
-}
-.gereating{
+.wrapper {
+
+    border-radius: 5px;
+    margin: 20px;
+    width: 400px;
+    height: 100px;
+
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: #333333;
+}
+
+.inner {
+
+    display: inline-flex;
     height: 50px;
-    margin: 10px;
-}
-.error {
-/*    border: 1px solid red;*/
-    color: red;
+    align-items: flex-start;
 
-    margin: 10px;
+    text-align: center;
 
-}
+    padding: 10px;
 
 
-.errorInput {
-    border: 2px solid red
 }
 
-.input {
+.wrapper__inputBlock {
+}
+.wrapper__input {
+    background-color: #333333;
+    border-radius: 2px;
+    border: cadetblue 1px solid;
+    color:cadetblue ;
+}
+.wrapper__input_error {
+    background-color: tomato;
+    border-radius: 2px;
+    border: cadetblue 1px solid;
+    color:red ;
+}
+
+
+
+
+.wrapper__buttonBlock {
+    margin: 0px 10px 0px 10px;
+}
+
+.wrapper__button {
+    background-color: #333333;
+    border-radius: 2px;
+    border: cadetblue 1px solid;
+
+    color: cadetblue;
+    font-size: 10px;
+    font-weight: bold;
+    height: 20px;
+}
+
+
+
+.wrapper__span {
+    margin-left: 10px;
+    color: cadetblue;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.wrapper__error_error {
+    display: flex;
+    color: tomato;
+    left: 0;
 }

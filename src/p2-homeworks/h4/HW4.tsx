@@ -22,50 +22,64 @@ function HW4() {
     return (
         <div>
             <hr/>
-            homeworks 4
-
-            <div className={s.column}>
-                <SuperInputText
+            homeworks 4 (not ready)
+            <div className={s.wrap}>
+            <div className={s.wrapper}>
+                <div><SuperInputText
                     value={text}
                     onChangeText={setText}
                     onEnter={showAlert}
                     error={error}
-                    // spanClassName={s.testSpanError}
+                    /*     spanClassName={s.testSpanError}*/
                 />
+                </div>
+                <div><SuperInputText
+                    value={text}
+                    onChangeText={setText}
+                    onEnter={showAlert}
 
-                <SuperInputText
+                    // spanClassName={s.testSpanError}
+                /></div>
+
+                <div><SuperInputText
                     className={s.blue} // проверьте, рабоет ли смешивание классов
 
-                />
+                /></div>
+
 
                 {/*----------------------------------------------------*/}
 
-                <SuperButton >
+                <div><SuperButton>
                     default
-                </SuperButton>
-
-                <SuperButton
+                </SuperButton></div>
+                <div><SuperButton
                     red // пропсу с булевым значением не обязательно указывать true
                     onClick={showAlert}
                 >
                     delete {/*// название кнопки попадёт в children*/}
-                </SuperButton>
+                </SuperButton></div>
+                <div>
+                    <SuperButton disabled>
+                        disabled
+                    </SuperButton>
+                </div>
 
-                <SuperButton disabled>
-                    disabled
-                </SuperButton>
 
                 {/*----------------------------------------------------*/}
-
-                <SuperCheckbox
+                <div><SuperCheckbox
                     checked={checked}
                     onChangeChecked={setChecked}
                 >
                     some text {/*// этот текст попадёт в children*/}
                 </SuperCheckbox>
+                </div>
+                <div>
 
-                {/*// onChange тоже должен работать*/}
-                <SuperCheckbox checked={checked} onChange={testOnChange}/>
+                    {/*// onChange тоже должен работать*/}
+                    <SuperCheckbox checked={checked} onChange={testOnChange}/></div>
+
+
+            </div>
             </div>
 
             <hr/>

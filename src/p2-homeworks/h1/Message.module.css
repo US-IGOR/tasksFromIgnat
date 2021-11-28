@@ -42,16 +42,16 @@ margin: 20px;
 }
 
 .secondflexcontainer_element_1{
-    background: mediumpurple;
+    background: cadetblue;
     color: mediumpurple;
     clip-path: polygon(100% 82%, 0 100%, 100% 100%);
     margin: 0px  0px 0px 0px;
 
 }
 .secondflexcontainer_element_2 {
-        background: mediumpurple;
-    margin: 0px  0px 0px 0px;
-    color: white;
+        background: cadetblue;
+
+    color: #333333;
     border-radius: 15px;
     border-bottom-left-radius: 0px;
     padding: 15px;
@@ -71,14 +71,17 @@ margin: 20px;
     height: 50px;
 }
 .name {
-    color: khaki;
+    color: #333;
     font-weight: bold;
     font-family: Arial;
 /*    border: green;
     border-style: dotted;*/
 }
 .message {
-    font-family: Arial;
+    font-family: "Comic Sans MS";
+    padding-top: 10px;
+    font-style: italic;
+
     /*border: yellow;
     border-style: dotted;*/
 }
