@@ -2,7 +2,8 @@
     background-color: #333333;
     border-radius: 2px;
     border: cadetblue 1px solid;
-
+margin: 5px;
+padding: 4px;
     color: cadetblue;
     font-size: 10px;
     font-weight: bold;
@@ -12,6 +13,7 @@
     background-color: #333333;
     border-radius: 2px;
     border: tomato 1px solid;
+    padding: 4px;
 
     color: tomato;
     font-size: 10px;
@@ -23,6 +25,7 @@
     background-color: #333333;
     border-radius: 2px;
     border: dimgrey 1px solid;
+    padding: 4px;
 
     color: dimgrey;
     font-size: 10px;

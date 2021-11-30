@@ -1,0 +1,26 @@
+.wrapper {
+
+    display:flex;
+    flex-wrap:wrap;
+
+    border-radius: 5px;
+    margin: 20px;
+    width: 200px;
+    height: 70px;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: #333333;
+}
+.inner1 {
+    flex: 0 1 100%;
+
+}
+.inner2 {
+    flex: 0 0 10%;
+}
+.inner3 {
+    flex: 0 1 10%;
+}
