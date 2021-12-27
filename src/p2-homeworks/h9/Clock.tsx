@@ -33,9 +33,11 @@ function Clock() {
 
     return (
         <div >
-            <div className={s.wrapT}
+            <div
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
+                className={s.wrapT}
+
             >
                 {stringTime}
             </div>
@@ -45,10 +47,10 @@ function Clock() {
                     {show && (  <div> {stringDate} </div>)}
                 </div>
 
-
-            <SuperButton onClick={start}>start</SuperButton>
+<div className={s.wrapT}>
+            <SuperButton onClick={start} >start</SuperButton>
             <SuperButton onClick={stop}>stop</SuperButton>
-
+        </div>
         </div>
     )
 }

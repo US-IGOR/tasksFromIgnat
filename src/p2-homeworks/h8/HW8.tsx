@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import {homeWorkReducer} from './bll/homeWorkReducer'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
+import s from './HW8.module.css'
+
 
  export type UserType = {
      _id: number,
@@ -22,10 +24,11 @@ function HW8() {
 
     // need to fix any
     const finalPeople = people.map((p: any) => (
-        <div key={p._id}>
-            <span>{p._id}</span>
-            <span>{p.name}</span>
-            <span>{p.age}</span>
+        <div key={p._id} className={s.block__element}>
+
+            <div >{p._id}</div>
+            <div >{p.name}</div>
+            <div >{p.age}</div>
 
 
         </div>
@@ -39,11 +42,11 @@ function HW8() {
         <div>
             <hr/>
             homeworks 8
-
+            <div className={s.wrapper}>
             {/*should work (должно работать)*/}
             {finalPeople}
-
-            <div>
+            </div>
+            <div className={s.wrapper2}>
                 <SuperButton onClick={sortUp}>sort up</SuperButton>
                 <SuperButton onClick={sortDown}>sort down</SuperButton>
                 <SuperButton onClick={sort18}>sort 18</SuperButton>

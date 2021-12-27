@@ -1,0 +1,29 @@
+.wrapper {
+
+
+
+    border-radius: 5px;
+    margin: 20px;
+    margin-bottom: 0px;
+    width: 180px;
+    height: 150px;
+    padding: 10px;
+
+
+
+
+color: cadetblue;
+    background-color: #333333;
+}
+
+.block__element {
+    display:flex;
+    justify-content:space-between;
+}
+
+
+.wrapper2{
+
+    margin-left:  35px;
+
+}
