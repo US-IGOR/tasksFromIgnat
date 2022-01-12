@@ -1,0 +1,28 @@
+.wrapT {
+
+    height: 20px;
+    text-align: center;
+}
+
+.wrapD {
+
+
+}
+
+.wrap {
+    border-radius: 5px;
+    width: 180px;
+    height: 50px;
+
+    border-style: solid;
+    padding: 10px;
+    margin: 20px;
+    color: cadetblue;
+    background-color: #333333;
+border-color: #333333;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}

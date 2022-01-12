@@ -2,7 +2,7 @@ import {loadingReducer} from './loadingReducer'
 import {combineReducers, createStore} from "redux";
 
  const reducers = combineReducers({
-    loading: loadingReducer,
+    loadingStore: loadingReducer,
 
  })
 

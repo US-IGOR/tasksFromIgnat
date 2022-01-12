@@ -16,7 +16,7 @@ const Greeting: React.FC<GreetingPropsType> = (
     {name, setNameCallback, addUser, error, totalUsers, onEnter} // деструктуризация пропсов
 ) => {
 
-    debugger
+
     return (
         <div className={s.wrapper}>
             <div className={s.inner}>
