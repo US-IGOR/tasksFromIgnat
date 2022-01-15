@@ -2,6 +2,7 @@ import React, {ChangeEvent, useState} from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
 import SuperRangeMui from "./common/c7-SuperRange/SuperRangeMui";
+import {RangeSlider} from "./common/c8-SuperDoubleRange/SuperDoubleRangeMui";
 
 function HW11() {
     const [value1, setValue1] = useState(0)
@@ -34,6 +35,7 @@ function HW11() {
             <div>
                 <div><span>{value1}</span></div>
                 <SuperDoubleRange
+                    onChangeRange={onChangeRange}
                     value={value1}
 
 
@@ -47,6 +49,14 @@ function HW11() {
                 <SuperRangeMui
                     onChangeRange={onChangeRange}
                     value={value1}
+                />
+
+
+            </div>
+            <div >
+                <RangeSlider
+                   onChangeRange={onChangeRange}
+                   valueTotal={value1}
                 />
 
 

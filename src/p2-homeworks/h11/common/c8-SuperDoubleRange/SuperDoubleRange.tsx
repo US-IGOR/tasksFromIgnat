@@ -6,7 +6,7 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 
 
 type SuperDoubleRangePropsType = DefaultInputPropsType & {
-    onChangeRange2?: (value: any) => void
+    onChangeRange?: (value: any) => void
     //value?: [any]
     vaue?:number
     // min, max, step, disable, ...
@@ -14,7 +14,7 @@ type SuperDoubleRangePropsType = DefaultInputPropsType & {
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
-        onChangeRange2, value,
+        onChangeRange, value,
         // min, max, step, disable, ...
         onChange,
         className,
@@ -22,12 +22,9 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     }
 ) => {
 
-    const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
+    const onChangeCallback = (e: any) => {    //Event  |   ChangeEvent<HTMLInputElement>
         onChange && onChange(e) // сохраняем старую функциональность
-
-        onChangeRange2 && onChangeRange2(+e.currentTarget.value )
-
-
+        onChangeRange && onChangeRange(Number(e.target.value))
     }
 
     const finalRangeClassName = `${s.range} ${className ? className : ''}`
