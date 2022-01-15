@@ -14,7 +14,7 @@ type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы
     value: number
 };
 
-const SuperRange: React.FC<SuperRangePropsType> = (
+const SuperRangeMui: React.FC<SuperRangePropsType> = (
     {
         type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
         onChange, onChangeRange,
@@ -26,28 +26,24 @@ const SuperRange: React.FC<SuperRangePropsType> = (
 ) => {
 
 
-    const onChangeCallback = (e: any) => {    //Event  |   ChangeEvent<HTMLInputElement>
-        onChange && onChange(e) // сохраняем старую функциональность
+    const onChangeCallbackMui = (e: any) => {    //Event  |   ChangeEvent<HTMLInputElement>
+
         onChangeRange && onChangeRange(Number(e.target.value))
     }
 
 
-    const finalRangeClassName = `${s.range} ${className ? className : ''}`
-
     return (
         <>
 
+            <Box width={300}>
 
-            <input
-
-                value={value}
-                type={'range'}
-                onChange={onChangeCallback}
-                className={finalRangeClassName}
-
-
-                {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
-            />
+                <Slider defaultValue={value}
+                        aria-label="Default"
+                        valueLabelDisplay="auto"
+                        onChange={onChangeCallbackMui}
+                        value={value}
+                />
+            </Box>
 
 
         </>
@@ -55,4 +51,4 @@ const SuperRange: React.FC<SuperRangePropsType> = (
 }
 
 
-export default SuperRange
+export default SuperRangeMui
