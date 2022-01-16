@@ -14,7 +14,7 @@ type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы
     value: number
 };
 
-const SuperRangeMui: React.FC<SuperRangePropsType> = (
+export const SuperRangeMui: React.FC<SuperRangePropsType> = (
     {
         type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
         onChange, onChangeRange,
@@ -49,6 +49,3 @@ const SuperRangeMui: React.FC<SuperRangePropsType> = (
         </>
     )
 }
-
-
-export default SuperRangeMui

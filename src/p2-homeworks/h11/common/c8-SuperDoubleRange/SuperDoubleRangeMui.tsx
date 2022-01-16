@@ -7,8 +7,9 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 // здесь мы говорим что у нашего инпута будут такие же пропсы как у обычного инпута
 // (чтоб не писать value: string, onChange: ...; они уже все описаны в DefaultInputPropsType)
 type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
-    onChangeRange?: (value: number) => void
-    valueTotal: number
+    onChangeRange: (value: Array<number>) => void
+    value2: Array<number>
+    handleChange: any
 };
 
 function valuetext(value: number) {
@@ -16,22 +17,42 @@ function valuetext(value: number) {
 }
 
 
-export const RangeSlider: React.FC<SuperRangePropsType> = (
+export const SuperDoubleRangeMui: React.FC<SuperRangePropsType> = (
     {
         type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
         onChange, onChangeRange,
         className,
-        valueTotal,
+        value2,
+        handleChange,
 
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
 
-    const [value, setValueMui] = React.useState<number[]>([valueTotal, 37]);
-
-    const handleChange = (event: Event, newValue: number | number[]) => {
 
 
+    return (
+        <Box sx={{width: 300}}>
+            <Slider
+                getAriaLabel={() => 'Temperature range'}
+                value={value2}
+                onChange={handleChange}
+                valueLabelDisplay="auto"
+                getAriaValueText={valuetext}
+            />
+        </Box>
+    );
+}
+
+
+
+
+//  const [value, setValueMui] = React.useState<number[]>(value2);
+
+
+
+
+/*
 let whichTotalValue = newValue as number[]
 whichTotalValue[0] = valueTotal
 
@@ -40,28 +61,10 @@ whichTotalValue[0] = valueTotal
 
 
 
-    }
+    */
 
-
-
-
-
-
-
+/*
     const onChangeCallbackMui = (e: any) => {    //Event  |   ChangeEvent<HTMLInputElement>
 
         onChangeRange && onChangeRange(Number(e.target.value))
-    }
-
-    return (
-        <Box sx={{width: 300}}>
-            <Slider
-                getAriaLabel={() => 'Temperature range'}
-                value={value}
-                onChange={handleChange}
-                valueLabelDisplay="auto"
-                getAriaValueText={valuetext}
-            />
-        </Box>
-    );
-}
+    }*/
