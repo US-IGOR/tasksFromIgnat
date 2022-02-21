@@ -17,7 +17,7 @@ export function Junior () {
             <HW10/>
             <HW11/>
 
-    {/*        <HW12/>*/}
+          <HW12/>
 
 
 
